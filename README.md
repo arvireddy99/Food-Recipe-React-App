@@ -18,3 +18,17 @@ To install React globally (remove -g if locally)
 ### 3. The website will run the development server in your system , Tadah!
 
 ### 4. It uses an API which user can call 5 get requests/min 
+
+
+Commands:
+
+Local:
+    cd Food-Recipe-React-App
+    npm i
+
+Deployment:
+    docker build -t food-recipe-react-app .
+    docker run -p 3000:80 food-recipe-react-app
+    heroku login
+    heroku create food-recipe-react-app
+    heroku buildpacks:set heroku-community/static
