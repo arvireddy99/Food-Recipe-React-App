@@ -1,4 +1,4 @@
-# Stahe-1: Base node image
+# Stage-1: Base node image
 FROM node:16.13-alpine as builder
 
 # The source directory
@@ -17,7 +17,7 @@ COPY . .
 # build the react-app
 RUN npm run build
 
-# Stahe-2: Base nginx image for serving
+# Stage-2: Base nginx image for serving
 FROM nginx:1.21-alpine as prod
 
 # Run Requirements
