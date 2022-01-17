@@ -1,12 +1,12 @@
 import React,{useEffect,useState} from 'react';
 import './App.css';
 import Recipe from './components/Recipe/Recipe'
-import Info from './Info'
+import API from './API'
 import Navbar from './components/Navbar/Navbar'
 
 const App = ()=>{
 
-  const [id,key] = Info();
+  const [id,key] = API();
   const [recipes,setRecipes] = useState([]);
   const [search,setSearch] = useState('');
   const [query,setQuery] = useState('chicken');
