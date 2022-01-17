@@ -29,8 +29,12 @@ Local:
 Deployment:
     docker build -t food-recipe-react-app .
     docker run -p 3000:80 food-recipe-react-app
-    heroku login
-    heroku create food-recipe-react-app --buildpack heroku/nodejs
-    git commit -m "Configure secure headers and static buildpacks"
-    heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git
-    git push heroku master
+
+    heroku container:login
+    heroku create food-recipe-react-app
+    git remote add docker https://git.heroku.com/food-recipe-react-app.git
+
+    heroku container:push web --remote docker
+    heroku container:release web --remote docker
+    heroku open --remote docker
+
