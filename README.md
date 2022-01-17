@@ -22,23 +22,22 @@ Pre-Requisites:
 
 1. To install React globally (remove -g if locally)
     
-    npx install create-react-app -g
+        npm i create-react-app -g
 
 2. Install the required packages from ***package.json***
 
-    npm i
+        npm i
 
 
 3. To Run the app :
     
-    npm start
+        npm start
 
 3. The website will run the development server in your system , Tadah!
 4. It uses an API which user can call 5 get requests/min 
 
 
 ### Using-Docker
-
 
 Pre-requisites:
 - Docker Version: "20.10.11"
