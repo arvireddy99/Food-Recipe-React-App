@@ -59,15 +59,15 @@ Docker Run:
 
 - Auto-delete container after running:
 
-        docker run --rm -it --name food-recipe-react-app -p 3000:80 food-recipe-react-app
+        docker run --rm -it --name food-recipe-react-app -p 3000:3000 food-recipe-react-app
 
 - Sync */app/src* inside container with local */src* (bind-mount)
 
-        docker run --rm -it --name  food-recipe-react-app -p 3000:80 -v $(pwd)/src:/app/src food-recipe-react-app
+        docker run --rm -it --name  food-recipe-react-app -p 3000:3000 -v $(pwd)/src:/app/src food-recipe-react-app
 
 - Setup bind mount as Read-Only *(ro:)*:
 
-        docker run --rm -it --name  food-recipe-react-app -p 3000:80 -v $(pwd)/src:/app/src:ro food-recipe-react-app
+        docker run --rm -it --name  food-recipe-react-app -p 3000:3000 -v $(pwd)/src:/app/src:ro food-recipe-react-app
 
 
 ## Using-Docker-Compose
